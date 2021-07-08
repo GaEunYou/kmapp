@@ -1,0 +1,61 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'war'
+
+    /**
+     * ====================================
+     * Node.js 설치 및 NPM 명령어 사용을 위한 의존성 추가
+     * */
+    id 'com.github.node-gradle.node' version '2.2.4'
+    /**
+     * ====================================
+     * */
+}
+
+group = 'co.kesti'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.4.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-web-services'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+/**
+ * ====================================
+ * Node.js 설치 및 NPM 명령어 사용을 위한 의존성 추가
+ * */
+
+apply plugin: 'com.github.node-gradle.node'
+
+node {
+    version = '12.14.1'
+    download = true
+}
+
+task appNpmBabel(type: NpmTask) {
+    args = ["run", "babel"]
+}
+
+npmInstall.dependsOn nodeSetup
+appNpmBabel.dependsOn npmInstall
+
+compileJava.dependsOn appNpmBabel
+build.dependsOn appNpmBabel
+bootJar.dependsOn appNpmBabel
+bootWar.dependsOn appNpmBabel
+
+/**
+ * ============
+ * */

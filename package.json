@@ -1,0 +1,21 @@
+{
+  "name": "kmapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel ./src/main/resources/static/js -d ./src/main/resources/static/babel"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GaEunYou/kmapp/issues"
+  },
+  "homepage": "https://github.com/GaEunYou/kmapp#readme",
+  "dependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.7"
+  }
+}

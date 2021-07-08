@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/homeLayout}">
+<head>
+</head>
+<body>
+<th:block layout:fragment="content">
+<p>hi</p>
+</th:block>
+
+<!-- user script -->
+<th:block layout:fragment="user_script">
+    <script type="text/javascript" th:src="@{/babel/kmapp.js}"></script>
+</th:block>
+</body>
+</html>
