@@ -7,7 +7,63 @@
     <th:block th:replace="~{fragment/commonScript :: commonScript}"></th:block>
 </head>
 <body>
-    <th:block layout:fragment="content"></th:block>
+    <div id="wrapper">
+
+        <!-- sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark">
+            <a class="sidebar-brand d-flex align-items-center" th:href="@{/page/kmapp}">
+                <div><img src="/img/logo/kmapp_logo.png" style="width: 80%;"></div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item item-kmapp active">
+                <a class="nav-link" th:href="@{/page/kmapp}">
+                    <i class="fas fa-fw fa-chart-area"></i><span>KMAPP 분석시스템</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <li class="nav-item item-dnsc">
+                <a class="nav-link" th:href="@{/page/dnsc}">
+                    <i class="fas fa-fw fa-chart-line"></i><span>KMAPP 예측시스템</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+        </ul>
+        <!-- //sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- topbar -->
+                <div class="navbar navbar-light bg-white topbar mb-4 static-top shadow">
+                    <div>
+                        <p class="navbar-title" id="topbar-title">KMAPP 분석시스템</p>
+                    </div>
+                    <div class="ml-auto">
+                        <i class="far nav-calendar fa-calendar-alt"></i><span class="mr-2 text-gray-600" id="currentDate"></span>
+                        <i class="far nav-clock fa-clock"></i><span class="text-gray-600" id="now"></span>
+                    </div>
+                </div>
+                <!-- //topbar -->
+
+                <!-- content -->
+                <th:block layout:fragment="content"></th:block>
+                <!-- //content -->
+            </div>
+
+            <!-- footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>우. 63568 제주특별자치도 서귀포시 서호북로 33 | COPYRIGHT ⓒ 2017 NATIONAL INSTITUTE OF METEOROLOGICAL SCIENCES. ALL RIGHTS RESERVED.</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- //footer -->
+        </div>
+        <!-- //Content Wrapper -->
+
+    </div>
     <th:block layout:fragment="user_script"></th:block>
+    <script type="text/javascript" th:src="@{/js/common/common.js}" defer></script>
 </body>
 </html>

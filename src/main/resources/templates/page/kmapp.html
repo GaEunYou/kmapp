@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/homeLayout}">
+<head>
+</head>
+<body>
+<th:block layout:fragment="content">
+    <div id="analFile">
+        <div class="container-fluid">
+            <!-- Content Row-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <div class="m-0 font-weight-bold text-primary">분석자료 생산</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-wrap">
+                                <table>
+                                    <colgroup>
+                                        <col style="width: 180px;">
+                                        <col>
+                                    </colgroup>
+                                    <tbody>
+                                    <tr>
+                                        <th>지표자료</th>
+                                        <td>
+                                            <label v-for="checkSurf in checkSurfs" class="inp radio_custom">
+                                                <input type="radio" th:name="analItem" v-model="checkSurf.checked" v-bind:value="checkSurf.val">
+                                                <i></i><b class="txt" v-text="checkSurf.txt"></b>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>연직자료</th>
+                                        <td>
+                                            <label v-for="checkVert in checkVerts" class="inp radio_custom">
+                                                <input type="radio" th:name="analItem" v-model="checkVert.checked" v-bind:value="checkVert.val">
+                                                <i></i><b class="txt" v-text="checkVert.txt"></b>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>고도(m)</th>
+                                        <td>
+                                            <input type="text" placeholder="2.5~2893.3">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>연직층</th>
+                                        <td>
+                                            <input type="text" placeholder="">
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //Content Row-->
+        </div>
+    </div>
+</th:block>
+
+<!-- user script -->
+<th:block layout:fragment="user_script">
+    <script type="text/javascript" th:src="@{/babel/kmapp.js}"></script>
+</th:block>
+</body>
+</html>
