@@ -28,7 +28,7 @@ var homeApp = new Vue({
         ],
         checked:[],
         checkAll:false,
-        codeVo: {
+        analysis: {
             analMethods: [
                 {"key": 'avg', "txt": '평균'},
                 {"key": 'max', "txt": '최대'},
@@ -49,10 +49,14 @@ var homeApp = new Vue({
                 {"key": 'Jeju', "txt": '제주'},
                 {"key": 'Incheon', "txt": '인천'},
                 {"key": 'Ulsan', "txt": '울산'},
+            ],
+            analColors:[
+                {"key": 'None', "txt": 'Default'},
+                {"key": 'BlueRed', "txt": 'Blue-Red'},
+                {"key": 'BlueYellowRed', "txt": 'Blue-Yellow-Red'},
+                {"key": 'WhiteBlue', "txt": 'White-Blue'},
+                {"kewy": 'WhiteYellowOrangeBlue', "txt": 'White-Yellow-Orange-Red'}
             ]
-        },
-        analysis: {
-            analMethod:''
         }
     },
     methods: {

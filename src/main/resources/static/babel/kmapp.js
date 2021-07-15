@@ -77,7 +77,7 @@ var homeApp = new Vue({
     }],
     checked: [],
     checkAll: false,
-    codeVo: {
+    analysis: {
       analMethods: [{
         "key": 'avg',
         "txt": '평균'
@@ -125,10 +125,23 @@ var homeApp = new Vue({
       }, {
         "key": 'Ulsan',
         "txt": '울산'
+      }],
+      analColors: [{
+        "key": 'None',
+        "txt": 'Default'
+      }, {
+        "key": 'BlueRed',
+        "txt": 'Blue-Red'
+      }, {
+        "key": 'BlueYellowRed',
+        "txt": 'Blue-Yellow-Red'
+      }, {
+        "key": 'WhiteBlue',
+        "txt": 'White-Blue'
+      }, {
+        "kewy": 'WhiteYellowOrangeBlue',
+        "txt": 'White-Yellow-Orange-Red'
       }]
-    },
-    analysis: {
-      analMethod: ''
     }
   },
   methods: {
