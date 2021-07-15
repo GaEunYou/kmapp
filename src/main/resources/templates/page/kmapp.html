@@ -43,18 +43,73 @@
                                     </tr>
                                     <tr>
                                         <th>고도(m)</th>
-                                        <td>
-                                            <input type="text" placeholder="2.5~2893.3">
+                                        <td style="padding: 7px 20px;">
+                                            <input type="text" placeholder="2.5~2893.3" class="w-25">
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>연직층</th>
+                                        <td style="padding: 7px 20px;">
+                                            <input type="text" placeholder="" class="w-25">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>시간(UTC)</th>
                                         <td>
-                                            <input type="text" placeholder="">
+                                            <label class="checkbox_custom">
+                                                <input type="checkbox" v-model="checkAll" @change="ckAll">
+                                                <i></i><span class="txt" v-text="checkTimeAll.txt"></span>
+                                            </label>
+                                            <label v-for="checkTime in checkTimes" class="checkbox_custom">
+                                                <input type="checkbox" v-model="checked" v-bind:value="checkTime.val">
+                                                <i></i><span class="txt" v-text="checkTime.txt"></span>
+                                            </label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>분석방법</th>
+                                        <td style="padding: 7px 20px;">
+                                            <select name="analType" id="analType" class="w-25">
+                                                <option v-for="item in codeVo.analMethods" v-bind:value="item.key">{{item.txt}}</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>기간</th>
+                                        <td style="padding: 7px 20px;">
+                                            <select name="periodType" id="periodType" class="w-25 periodType">
+                                                <option v-for="item in codeVo.analPeriods" v-bind:value="item.key">{{item.txt}}</option>
+                                            </select>
+                                            <div class="input-group input-append date date-ymdhm" data-date-format="yyyy-mm-dd">
+                                                <input type="text" class="form-control" name="analStart" id="analStart" />
+                                                <span class="input-group-addon add-on pred-Date-addon1">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                            <span class="or-text">-</span>
+                                            <div class="input-group input-append date date-ymdhm" data-date-format="yyyy-mm-dd">
+                                                <input type="text" class="form-control" name="analEnd" id="analEnd" />
+                                                <span class="input-group-addon add-on pred-Date-addon1">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th>영역</th>
+                                        <td style="padding: 7px 20px;">
+                                            <select name="analArea" id="analArea" class="w-25">
+                                                <option v-for="item in codeVo.analAreas" v-bind:value="item.key">{{item.txt}}</option>
+                                            </select>
                                         </td>
                                     </tr>
                                     </tbody>
                                 </table>
+                                <div class="btn-search-wrap">
+                                    <button type="button" class="btn btn-sm btn-primary shadow-sm btn-p" id="prodBtn">
+                                        <i class="fas fa-download fa-sm text-white-50 i-p"></i>분석자료 생산
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

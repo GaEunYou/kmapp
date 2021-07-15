@@ -3362,7 +3362,7 @@ input[type="button"].btn-block {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
-  width: 100%;
+  width: 30%;
 }
 
 .input-group > .form-control,
@@ -4528,7 +4528,7 @@ input[type="button"].btn-block {
 .card-body {
   flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  padding: 1rem 1.25rem 0.7rem 1.25rem;
 }
 
 .card-title {
@@ -11344,7 +11344,7 @@ body.sidebar-toggled footer.sticky-footer {
   font-size: 16px;
   color:#666;
   letter-spacing: -0.045em;
-  font-weight: 300;
+  font-weight: 500;
   display: flex;
 }
 
@@ -11462,7 +11462,7 @@ label.checkbox_custom i {
   margin:0;
   position: absolute;
   left: 0;
-  top:3px;
+  top:1px;
   width:17px;
   height:17px;
   background:url("../img/ico/checkbox_icon_off.jpg") center top no-repeat;
@@ -11474,7 +11474,7 @@ label.checkbox_custom span.txt {
   font-size: 15px;
   color:#666;
   letter-spacing: -0.045em;
-  font-weight:400;
+  font-weight:500;
   margin: 0 0 0 23px;
   vertical-align: middle;
 }
@@ -11517,7 +11517,7 @@ label.checkbox_custom span.txt {
 }
 
 .table-wrap table tr td .date-ymdhm {
-  display: inline-block;
+  display: table;
   vertical-align: middle;
   position: relative;
 }
@@ -11534,7 +11534,7 @@ label.checkbox_custom span.txt {
 
 .btn-search-wrap{
   text-align:center;
-  margin-top:1.2rem;
+  margin-top:0.7rem;
 }
 
 .btn-p {

@@ -2071,11 +2071,11 @@ fieldset[disabled] .btn-default.active {
   color: #fff;
   background-color: #333;
 }
-.btn-primary {
+/*.btn-primary {
   color: #fff;
   background-color: #428bca;
   border-color: #357ebd;
-}
+}*/
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active,
@@ -2316,10 +2316,10 @@ fieldset[disabled] .btn-link:focus {
   border-radius: 6px;
 }
 .btn-sm {
-  padding: 5px 10px;
-  font-size: 12px;
+  padding: 7px 12px;
+  font-size: 13px;
   line-height: 1.5;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .btn-xs {
   padding: 1px 5px;
@@ -2365,8 +2365,8 @@ input[type="button"].btn-block {
 @font-face {
   font-family: 'Glyphicons Halflings';
 
-  src: url('../fonts/glyphicons-halflings-regular.eot');
-  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../../fonts/webfonts/glyphicons-halflings-regular.eot');
+  src: url('../../fonts/webfonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../../fonts/webfonts/glyphicons-halflings-regular.woff') format('woff'), url('../../fonts/webfonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../../fonts/webfonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -3386,7 +3386,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   text-align: center;
   background-color: #eee;
   border: 1px solid #ccc;
-  border-radius: 4px;
 }
 .input-group-addon.input-sm {
   padding: 5px 10px;
